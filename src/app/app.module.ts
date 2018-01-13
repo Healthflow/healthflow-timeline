@@ -1,22 +1,71 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-// Covalent
-import { CovalentLayoutModule, CovalentStepsModule } from '@covalent/core';
-import { CovalentHttpModule } from '@covalent/http';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { Http, HttpModule, JsonpModule } from '@angular/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
+import { MatButtonModule, MatListModule, MatIconModule, MatCardModule, MatMenuModule, MatInputModule, MatButtonToggleModule,
+         MatProgressSpinnerModule, MatSelectModule, MatSlideToggleModule, MatDialogModule, MatSnackBarModule, MatToolbarModule,
+         MatTabsModule, MatSidenavModule, MatTooltipModule, MatRippleModule, MatRadioModule, MatGridListModule,
+         MatDatepickerModule, MatNativeDateModule, MatSliderModule, MatAutocompleteModule } from '@angular/material';
+
+import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, CovalentExpansionPanelModule,
+         CovalentStepsModule, CovalentLoadingModule, CovalentDialogsModule, CovalentSearchModule, CovalentPagingModule,
+         CovalentNotificationsModule, CovalentMenuModule, CovalentDataTableModule, CovalentMessageModule } from '@covalent/core';
+
+import { EventList } from './events/event-list.component';
+
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
+  imports:      [
     BrowserModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    RouterModule.forRoot([]),
+    HttpModule,
+    JsonpModule,
+    /** Material Modules */
+    MatButtonModule,
+    MatListModule,
+    MatIconModule,
+    MatCardModule,
+    MatMenuModule,
+    MatInputModule,
+    MatSelectModule,
+    MatButtonToggleModule,
+    MatSlideToggleModule,
+    MatProgressSpinnerModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatToolbarModule,
+    MatTabsModule,
+    MatSidenavModule,
+    MatTooltipModule,
+    MatRippleModule,
+    MatRadioModule,
+    MatGridListModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatSliderModule,
+    MatAutocompleteModule,
+    /** Covalent Modules */
+    CovalentCommonModule,
     CovalentLayoutModule,
+    CovalentMediaModule,
+    CovalentExpansionPanelModule,
     CovalentStepsModule,
-    CovalentHttpModule.forRoot(),
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    CovalentDialogsModule,
+    CovalentLoadingModule,
+    CovalentSearchModule,
+    CovalentPagingModule,
+    CovalentNotificationsModule,
+    CovalentMenuModule,
+    CovalentDataTableModule,
+    CovalentMessageModule
+    ],
+  declarations: [ AppComponent, EventList ],
+  bootstrap:    [ AppComponent ]
 })
 export class AppModule { }
