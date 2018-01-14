@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { Http, HttpModule, JsonpModule } from '@angular/http';
@@ -16,10 +17,13 @@ import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, Covale
          CovalentStepsModule, CovalentLoadingModule, CovalentDialogsModule, CovalentSearchModule, CovalentPagingModule,
          CovalentNotificationsModule, CovalentMenuModule, CovalentDataTableModule, CovalentMessageModule } from '@covalent/core';
 
-import { EventList } from './events/event-list.component';
+import { EventListComponent } from './events/event-list.component';
+import { EventCardComponent } from './events/event-card.component';
+import { EventService } from './services/event/event.service';
 
 @NgModule({
-  imports:      [
+  imports: [
+    CommonModule,
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
@@ -65,7 +69,11 @@ import { EventList } from './events/event-list.component';
     CovalentDataTableModule,
     CovalentMessageModule
     ],
-  declarations: [ AppComponent, EventList ],
-  bootstrap:    [ AppComponent ]
+  declarations: [ 
+    AppComponent,
+    EventListComponent, 
+    EventCardComponent ],
+  providers: [ EventService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
