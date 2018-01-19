@@ -11,7 +11,7 @@ import { AppComponent } from './app.component';
 import { MatButtonModule, MatListModule, MatIconModule, MatCardModule, MatMenuModule, MatInputModule, MatButtonToggleModule,
          MatProgressSpinnerModule, MatSelectModule, MatSlideToggleModule, MatDialogModule, MatSnackBarModule, MatToolbarModule,
          MatTabsModule, MatSidenavModule, MatTooltipModule, MatRippleModule, MatRadioModule, MatGridListModule,
-         MatDatepickerModule, MatNativeDateModule, MatSliderModule, MatAutocompleteModule } from '@angular/material';
+         MatDatepickerModule, MatNativeDateModule, MatSliderModule, MatAutocompleteModule, MatCheckboxModule, MatCheckbox } from '@angular/material';
 
 import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, CovalentExpansionPanelModule,
          CovalentStepsModule, CovalentLoadingModule, CovalentDialogsModule, CovalentSearchModule, CovalentPagingModule,
@@ -19,6 +19,7 @@ import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, Covale
 
 import { EventListComponent } from './events/event-list.component';
 import { EventCardComponent } from './events/event-card.component';
+import { EventFiltersComponent } from './events/filters/event-filters.component';
 import { EventService } from './services/event/event.service';
 
 @NgModule({
@@ -54,6 +55,7 @@ import { EventService } from './services/event/event.service';
     MatNativeDateModule,
     MatSliderModule,
     MatAutocompleteModule,
+    MatCheckboxModule,
     /** Covalent Modules */
     CovalentCommonModule,
     CovalentLayoutModule,
@@ -72,7 +74,8 @@ import { EventService } from './services/event/event.service';
   declarations: [ 
     AppComponent,
     EventListComponent, 
-    EventCardComponent ],
+    EventCardComponent,
+    EventFiltersComponent ],
   providers: [ EventService ],
   bootstrap: [ AppComponent ]
 })
