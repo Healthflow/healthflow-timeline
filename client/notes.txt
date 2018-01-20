@@ -1,0 +1,1 @@
+Event filter list item should have a click event that clicks the checkbox so the checkbox text can be a seperate label

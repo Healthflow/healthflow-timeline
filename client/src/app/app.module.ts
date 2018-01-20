@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { Http, HttpModule, JsonpModule } from '@angular/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 
@@ -17,6 +17,8 @@ import { CovalentCommonModule, CovalentLayoutModule, CovalentMediaModule, Covale
          CovalentStepsModule, CovalentLoadingModule, CovalentDialogsModule, CovalentSearchModule, CovalentPagingModule,
          CovalentNotificationsModule, CovalentMenuModule, CovalentDataTableModule, CovalentMessageModule } from '@covalent/core';
 
+import { AppRoutingModule } from './app-routing.module';
+import { MainComponent } from './main.component';
 import { EventListComponent } from './events/event-list.component';
 import { EventCardComponent } from './events/event-card.component';
 import { EventFiltersComponent } from './events/filters/event-filters.component';
@@ -69,10 +71,13 @@ import { EventService } from './services/event/event.service';
     CovalentNotificationsModule,
     CovalentMenuModule,
     CovalentDataTableModule,
-    CovalentMessageModule
+    CovalentMessageModule,
+    /** Ours */
+    AppRoutingModule
     ],
   declarations: [ 
     AppComponent,
+    MainComponent,
     EventListComponent, 
     EventCardComponent,
     EventFiltersComponent ],

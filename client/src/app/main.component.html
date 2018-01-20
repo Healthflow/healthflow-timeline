@@ -1,0 +1,20 @@
+<td-layout>
+
+    <td-layout-nav-list logo="assets:teradata" toolbarTitle="" navigationRoute="/" opened="true" mode="side">
+
+      <div td-sidenav-content>
+        <event-filters (onEventFilterChanged)="onEventFilterChanged($event)"></event-filters>
+      </div>
+
+      <div td-toolbar-content>
+        <button mat-button tdLayoutNavListToggle>
+            <mat-icon>menu</mat-icon>
+        </button>
+      </div>
+
+      <event-list [eventFilter]="eventFilter">
+      </event-list>
+
+    </td-layout-nav-list>
+
+</td-layout>
