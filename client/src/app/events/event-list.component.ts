@@ -52,7 +52,7 @@ export class EventListComponent implements OnInit, OnDestroy {
       return events;
     }
 
-    for(let i = 0; i > events.length; i++) {
+    for(let i = 0; i < events.length; i++) {
       let event = events[i];
 
       if(this.eventMatchesFilter(filter, event)) {
