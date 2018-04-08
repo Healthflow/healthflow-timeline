@@ -13,6 +13,19 @@ $cinnabar: rgb(230, 75, 25);
     border-right-width: 10px;
 }
 
+.mat-checkbox {
+    width: 100%;
+}
+
+::ng-deep .mat-checkbox-layout {
+    width: 100%;
+}
+
+::ng-deep.mat-checkbox.mat-checkbox-label-before .mat-checkbox-inner-container {
+    margin-left: auto;
+    margin-right: 0px;
+}
+
 .pine-green {
     border-right-color: $pine-green;
 }
