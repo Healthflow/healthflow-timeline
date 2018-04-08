@@ -8,7 +8,7 @@ import { EventFilterModel } from './filters/event-filter.model';
 @Component({
   selector: 'event-list',
   templateUrl: './event-list.component.html',
-  styles: ['event-list.component.css']
+  styleUrls: ['./event-list.component.scss']
 })
 export class EventListComponent implements OnInit, OnDestroy {
   
@@ -48,14 +48,8 @@ export class EventListComponent implements OnInit, OnDestroy {
 
     let filteredEvents : Array<EventModel> = [];
 
-    if (!filter || filter.EventTypesToDisplay.length === 0) {
-      return events;
-    }
-
-    for(let i = 0; i < events.length; i++) {
-      let event = events[i];
-
-      if(this.eventMatchesFilter(filter, event)) {
+    for (let event of events) {
+      if(!filter || filter.EventTypesToDisplay.length === 0 || this.eventMatchesFilter(filter, event)) {
         filteredEvents.push(event);
       }
     }
@@ -69,7 +63,7 @@ export class EventListComponent implements OnInit, OnDestroy {
       return true;
     }
 
-    let isMatch = filter.EventTypesToDisplay.includes(event.Type);
+    let isMatch = filter.EventTypesToDisplay.includes(event.Type.Name);
 
     return isMatch;
   }  

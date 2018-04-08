@@ -1,38 +1,6 @@
 <mat-list>
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Lab Results')">Lab Results</mat-checkbox>
-    </mat-list-item>
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Location')">Location</mat-checkbox>
-    </mat-list-item>
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Medical')">Medical</mat-checkbox>
-    </mat-list-item>
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Nursing')">Nursing</mat-checkbox>
-    </mat-list-item>
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Pathology')">Pathology</mat-checkbox>
-    </mat-list-item>
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Physiotherapy')">Physiotherapy</mat-checkbox>
-    </mat-list-item>  
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Occupational Therapy')">Occupational Therapy</mat-checkbox>
-    </mat-list-item>  
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Dietics')">Dietics</mat-checkbox>
-    </mat-list-item>  
-    <mat-list-item>
-        <mat-icon>home</mat-icon>
-        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, 'Procedural')">Procedural</mat-checkbox>
+    <mat-list-item *ngFor="let eventType of eventTypes" [ngClass]="getEventTypeClass(eventType)">
+        <mat-icon>{{eventType.Icon}}</mat-icon>
+        <mat-checkbox labelPosition="before" (change)="onFilterChanged($event, eventType.Name)">{{eventType.Name}}</mat-checkbox>
     </mat-list-item>  
 </mat-list>

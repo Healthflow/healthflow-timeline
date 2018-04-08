@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card [ngClass]="getEventTypeClass(event.Type)">
     <mat-card-content>
         <mat-card-header>
             <mat-card-title>{{event.Title}}</mat-card-title>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { Http, HttpModule, JsonpModule } from '@angular/http';
+import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -23,6 +24,7 @@ import { EventListComponent } from './events/event-list.component';
 import { EventCardComponent } from './events/event-card.component';
 import { EventFiltersComponent } from './events/filters/event-filters.component';
 import { EventService } from './services/event/event.service';
+import { EventTypeService } from './services/eventTypes/event-type.service';
 
 @NgModule({
   imports: [
@@ -32,6 +34,7 @@ import { EventService } from './services/event/event.service';
     FormsModule,
     RouterModule.forRoot([]),
     HttpModule,
+    HttpClientModule,
     JsonpModule,
     /** Material Modules */
     MatButtonModule,
@@ -81,7 +84,7 @@ import { EventService } from './services/event/event.service';
     EventListComponent, 
     EventCardComponent,
     EventFiltersComponent ],
-  providers: [ EventService ],
+  providers: [ EventService, EventTypeService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

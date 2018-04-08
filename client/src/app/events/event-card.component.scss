@@ -1,0 +1,88 @@
+$pine-green: rgb(0, 120, 105);
+$lightning-yellow: rgb(250, 170, 35);
+$eastern-blue: rgb(0, 150, 165);
+$french-rose: rgb(240, 95, 145);
+$spice: rgb(120, 85, 70);
+$denim: rgb(20, 100, 190);
+$fruit-salad: rgb(75, 175, 80);
+$light-sky-blue: rgb(130, 210, 250);
+$cinnabar: rgb(230, 75, 25);
+
+.mat-card {
+    border-style: solid;
+}
+
+.mat-card-content {
+    padding: 0px;
+}
+
+.mat-card-content .mat-card-content {
+    padding: 16px;
+}
+
+.mat-card-header { 
+    color: white;
+}
+
+.pine-green {
+    border-color: $pine-green;
+    .mat-card-header {
+        background-color: $pine-green;
+    }
+}
+
+.lightning-yellow {
+    border-color: $lightning-yellow;
+    .mat-card-header {
+        background-color: $lightning-yellow;
+    }
+}
+
+.eastern-blue {
+    border-color: $eastern-blue;
+    .mat-card-header {
+        background-color: $eastern-blue;
+    }
+}
+
+.french-rose {
+    border-color: $french-rose;
+    .mat-card-header {
+        background-color: $french-rose;
+    }
+}
+
+.spice {
+    border-color: $spice;
+    .mat-card-header {
+        background-color: $spice;
+    }
+}
+
+.denim {
+    border-color: $denim;
+    .mat-card-header {
+        background-color: $denim;
+    }
+}
+
+.fruit-salad {
+    border-color: $fruit-salad;
+    .mat-card-header {
+        background-color: $fruit-salad;
+    }
+}
+
+.light-sky-blue {
+    border-color: $light-sky-blue;
+    .mat-card-header {
+        background-color: $light-sky-blue;
+    }
+}
+
+.cinnabar {
+    border-color: $cinnabar;
+    .mat-card-header {
+        background-color: $cinnabar;
+    }
+}

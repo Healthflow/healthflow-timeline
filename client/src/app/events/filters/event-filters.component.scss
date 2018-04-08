@@ -1,0 +1,50 @@
+$pine-green: rgb(0, 120, 105);
+$lightning-yellow: rgb(250, 170, 35);
+$eastern-blue: rgb(0, 150, 165);
+$french-rose: rgb(240, 95, 145);
+$spice: rgb(120, 85, 70);
+$denim: rgb(20, 100, 190);
+$fruit-salad: rgb(75, 175, 80);
+$light-sky-blue: rgb(130, 210, 250);
+$cinnabar: rgb(230, 75, 25);
+
+.mat-list-item {
+    border-right-style: solid;
+    border-right-width: 10px;
+}
+
+.pine-green {
+    border-right-color: $pine-green;
+}
+
+.lightning-yellow {
+    border-right-color: $lightning-yellow;
+}
+
+.eastern-blue {
+    border-right-color: $eastern-blue;
+}
+
+.french-rose {
+    border-right-color: $french-rose;
+}
+
+.spice {
+    border-right-color: $spice;
+}
+
+.denim {
+    border-right-color: $denim;
+}
+
+.fruit-salad {
+    border-right-color:$fruit-salad;
+}
+
+.light-sky-blue {
+    border-right-color: $light-sky-blue;
+}
+
+.cinnabar {
+    border-right-color: $cinnabar;
+}

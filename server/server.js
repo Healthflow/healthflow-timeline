@@ -1,12 +1,36 @@
 const express = require("express"),
+      cors = require("cors"),
       app = express(),
-      server = require("http").createServer(app);
+      server = require("http").createServer(app),
       io = require("socket.io")(server);
 
+app.use(express.static(__dirname + "/dist"));
+app.use(cors({origin: 'http://localhost:4200'}));
+
+// api
+var router = express.Router();
+
+var types =  [
+  { Name: "Lab Results", Class: "pine-green", Icon: "trending_up" },              //   0, 120, 105
+  { Name: "Location", Class: "lightning-yellow", Icon: "location_on" },           // 250, 170,  35
+  { Name: "Medical", Class: "eastern-blue", Icon: "local_hospital" },             //   0, 150, 165
+  { Name: "Nursing", Class: "french-rose", Icon: "local_hotel" },                 // 240,  95, 145
+  { Name: "Pathology", Class: "spice", Icon: "search" },                          // 120,  85,  70
+  { Name: "Physiotherapy", Class: "denim", Icon: "directions_walk" },             //  20, 100, 190
+  { Name: "Occupational Therapy", Class: "fruit-salad", Icon: "local_florist" },  //  75, 175,  80
+  { Name: "Dietics", Class: "light-sky-blue", Icon: "restaurant" },               // 130, 210, 250
+  { Name: "Procedural", Class: "cinnabar", Icon: "group_work" }                   // 230,  75,  25
+];
+
+router.get('/types', function(req, res) {
+  res.json(types);
+});
+
+app.use('/api', router);
+
+// sockets
 let timerId = null,
     sockets = new Set();
-
-app.use(express.static(__dirname + "/dist")); 
 
 var count = 1;
 
@@ -44,7 +68,8 @@ function startTimer() {
 
     var event = {
       Title: "Some title " + count,
-      Description: "Some description " + count
+      Description: "Some description " + count,
+      Type: types[Math.floor(Math.random()*types.length)]
     };
 
     for (const s of sockets) {      
