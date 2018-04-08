@@ -8,6 +8,10 @@ $fruit-salad: rgb(75, 175, 80);
 $light-sky-blue: rgb(130, 210, 250);
 $cinnabar: rgb(230, 75, 25);
 
+$min-width-for-indent: 900px;
+$margin-base: 8px;
+$margin-increment: 8px;
+
 .mat-card {
     border-style: solid;
 }
@@ -26,6 +30,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .pine-green {
     border-color: $pine-green;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 8);
+        margin-right: $margin-base + ($margin-increment * 0);
+    }
     .mat-card-header {
         background-color: $pine-green;
     }
@@ -33,6 +41,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .lightning-yellow {
     border-color: $lightning-yellow;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 7);
+        margin-right: $margin-base + ($margin-increment * 1);
+    }
     .mat-card-header {
         background-color: $lightning-yellow;
     }
@@ -40,6 +52,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .eastern-blue {
     border-color: $eastern-blue;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 6);
+        margin-right: $margin-base + ($margin-increment * 2);
+    }
     .mat-card-header {
         background-color: $eastern-blue;
     }
@@ -47,6 +63,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .french-rose {
     border-color: $french-rose;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 5);
+        margin-right: $margin-base + ($margin-increment * 3);
+    }
     .mat-card-header {
         background-color: $french-rose;
     }
@@ -54,6 +74,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .spice {
     border-color: $spice;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 4);
+        margin-right: $margin-base + ($margin-increment * 4);
+    }
     .mat-card-header {
         background-color: $spice;
     }
@@ -61,6 +85,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .denim {
     border-color: $denim;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 3);
+        margin-right: $margin-base + ($margin-increment * 5);
+    }
     .mat-card-header {
         background-color: $denim;
     }
@@ -68,6 +96,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .fruit-salad {
     border-color: $fruit-salad;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 2);
+        margin-right: $margin-base + ($margin-increment * 6);
+    }
     .mat-card-header {
         background-color: $fruit-salad;
     }
@@ -75,6 +107,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .light-sky-blue {
     border-color: $light-sky-blue;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 1);
+        margin-right: $margin-base + ($margin-increment * 7);
+    }
     .mat-card-header {
         background-color: $light-sky-blue;
     }
@@ -82,6 +118,10 @@ $cinnabar: rgb(230, 75, 25);
 
 .cinnabar {
     border-color: $cinnabar;
+    @media screen and (min-width: $min-width-for-indent) {
+        margin-left: $margin-base + ($margin-increment * 0);
+        margin-right: $margin-base + ($margin-increment * 8);
+    }
     .mat-card-header {
         background-color: $cinnabar;
     }
